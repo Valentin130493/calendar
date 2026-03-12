@@ -1,46 +1,46 @@
 # Calendar — Frontend
 
-React-приложение с месячным и дневным видом, drag-and-drop и поиском.
+React app with month and day views, drag-and-drop, and search.
 
-## Стек
+## Stack
 
 - React 19 + TypeScript
 - Vite 7
 - Emotion (styled components)
 - dnd-kit (drag & drop)
-- TanStack Query (кэш и синхронизация с API)
+- TanStack Query (cache and API sync)
 
-## Запуск локально
-
-```bash
-npm install
-npm run dev
-```
-
-Приложение поднимется на `http://localhost:5173`.
-
-## Сборка для продакшна
+## Local development
 
 ```bash
-npm run build
+yarn install
+yarn dev
 ```
 
-Статика выгружается в `dist/`.
+App runs at `http://localhost:5173`.
 
-## Переменные окружения
+## Production build
 
-Создай файл `.env` в корне `front/`:
+```bash
+yarn build
+```
+
+Static files output to `dist/`.
+
+## Environment variables
+
+Create a `.env` file in `front/`:
 
 ```env
 VITE_API_URL=http://localhost:3000
 ```
 
-В продакшне укажи URL задеплоенного бэкенда.
+In production, set the URL of your deployed backend.
 
-## Функциональность
+## Features
 
-- **Месячный вид** — сетка, навигация по месяцам, отображение праздников
-- **Дневной вид** — временная шкала 24ч, карточки пропорциональны длительности, пересекающиеся события отображаются рядом (как в Google Calendar)
-- Создание, редактирование и удаление событий
-- Drag & drop между днями и временными слотами
-- Поиск по названию события
+- **Month view** — grid with month navigation and holidays
+- **Day view** — 24h timeline, cards proportional to duration, overlapping events shown side by side (like Google Calendar)
+- Create, edit, and delete events
+- Drag & drop between days and time slots
+- Search by event title
