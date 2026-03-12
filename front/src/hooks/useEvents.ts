@@ -7,7 +7,7 @@ export const useEvents = (month?: string) => {
 
 	const eventsQuery = useQuery({
 		queryKey: ['events', month],
-		queryFn: () => fetchEvents(month).then((res) => res.data),
+		queryFn: () => fetchEvents(month).then((res) => res.data).catch(() => [] as Event[]),
 	});
 
 	const addEvent = useMutation({
