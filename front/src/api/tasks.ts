@@ -2,7 +2,7 @@ import axios from 'axios';
 import type { Event } from '../types';
 
 const client = axios.create({
-  baseURL: import.meta.env.VITE_REACT_APP_API_URL || 'http://localhost:3000',
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:3000',
 });
 
 export const fetchEvents = (month?: string) =>
