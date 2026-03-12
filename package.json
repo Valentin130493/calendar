@@ -1,0 +1,16 @@
+{
+  "name": "calendar-project",
+  "private": true,
+  "workspaces": [
+    "front",
+    "back"
+  ],
+  "scripts": {
+    "dev": "concurrently \"yarn workspace back start:dev\" \"yarn workspace front dev\"",
+    "build": "yarn workspace back build && yarn workspace front build",
+    "install:all": "yarn install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
